@@ -17,7 +17,7 @@ mapa = ["..*..", 0
 '''
 
 def verifica(mapa,x,y):
-    return (0 <= x < len(mapa[0])) and (0 <= y < len(mapa))
+    return (0 <= x < len(mapa)) and (0 <= y < len(mapa))
 
 
 def dfs(adj,o):
@@ -43,7 +43,7 @@ def area(p,mapa):
     y = 0
     while y < len(mapa):
         x = 0
-        while x < len(mapa[0]):
+        while x < len(mapa):
             adj[(x,y)] = []
 
             # Esquerda
