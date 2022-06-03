@@ -8,13 +8,11 @@ alocados a nenhum projecto, ordenada por ordem de número de aluno.
 '''
 
 def aloca(prefs):
+    new_prefs = list(prefs.items())
+    new_prefs.sort(key = lambda x : (x[0]))
+    
     projects = {}
     alunoNaoAlocs = []
-
-    new_prefs = list(prefs.items())
-    print(new_prefs)
-
-    new_prefs.sort(key = lambda x : (x[0]))
 
     for aluno in new_prefs:
         projects_alocated = projects.values()
